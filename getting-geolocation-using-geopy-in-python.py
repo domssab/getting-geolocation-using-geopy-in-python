@@ -13,6 +13,7 @@ options = input("Location or Coordinates?: ")
 if options == '1':
     # call the Nominatim tool
     loc = Nominatim(user_agent="GetLoc")
+
     # asking user to input location
     location = input("Location: ")
     getLoc = loc.geocode(location)
@@ -24,9 +25,14 @@ if options == '1':
     print("Latitude = ", getLoc.latitude, "\n")
     print("Longitude = ", getLoc.longitude)
 
+# if the user chose option 2
 if options == '2':
     # call the Nominatim Tool
     geoLoc = Nominatim(user_agent="GetLoc")
+
+    # asking user to input the coordinates
+    coordinate = input("Coordinates: ")
+    locname = geoLoc.reverse(coordinate)
 # importing modules
 from geopy.geocoders import Nominatim
 
