@@ -33,3 +33,7 @@ if options == '2':
     # asking user to input the coordinates
     coordinate = input("Coordinates: ")
     locname = geoLoc.reverse(coordinate)
+
+    # printing the address/location name
+    print(locname.address)
+
