@@ -40,10 +40,8 @@ def start():
             print(locname.address)
 
 # if the user chose option 3
-        if options == '3':
+        elif options == '3':
             print("Thank you!")
-        break
+            break
 
-    else:
-        print("Make sure you input the correct number.")
 start()
