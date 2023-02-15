@@ -12,6 +12,9 @@ print("Here are your options:"
       "\n3. Exit")
 options = input("Location or Coordinates?: ")
 
+# if the user chose option 1
+if options == '1':
+
 # entering the location name
 location = input("Location: ")
 getLoc = loc.geocode(location)
