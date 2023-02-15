@@ -1,4 +1,5 @@
-# importing geopy library
+# install geopy library using the 'pip install geopy' in terminal
+# import the geopy library
 from geopy.geocoders import Nominatim
 
 # calling the Nominatim tool
