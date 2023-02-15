@@ -24,6 +24,7 @@ if options == '1':
     print("Latitude = ", getLoc.latitude, "\n")
     print("Longitude = ", getLoc.longitude)
 
+if options == '2':
 # importing modules
 from geopy.geocoders import Nominatim
 
