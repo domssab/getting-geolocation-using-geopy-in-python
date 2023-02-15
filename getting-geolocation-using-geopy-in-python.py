@@ -25,6 +25,8 @@ if options == '1':
     print("Longitude = ", getLoc.longitude)
 
 if options == '2':
+    # call the Nominatim Tool
+    geoLoc = Nominatim(user_agent="GetLoc")
 # importing modules
 from geopy.geocoders import Nominatim
 
