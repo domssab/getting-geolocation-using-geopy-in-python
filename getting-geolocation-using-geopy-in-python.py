@@ -4,10 +4,13 @@ from geopy.geocoders import Nominatim
 
 def start():
 # make user choose between location or coordinates
-    print("Here are your options:"
-        "\n1. Location"
-        "\n2. Coordinates",
-        "\n3. Exit")
+    print(" ---------------WELCOME---------------"
+        "\n|       Here are your options:        |"
+        "\n|       1. Location                   |"
+        "\n|       2. Coordinates                |",
+        "\n|       3. Exit                       |"
+        "\n -------------------------------------"
+        "\n")
     while True:
         options = input("Location or Coordinates?: ")
 
@@ -21,10 +24,10 @@ def start():
             getLoc = loc.geocode(location)
 
     # printing address
-            print(getLoc.address)
+            print("Address:", getLoc.address)
 
     # printing latitude and longitude
-            print("Latitude = ", getLoc.latitude, "\n")
+            print("Latitude = ", getLoc.latitude,)
             print("Longitude = ", getLoc.longitude)
 
 # if the user chose option 2
