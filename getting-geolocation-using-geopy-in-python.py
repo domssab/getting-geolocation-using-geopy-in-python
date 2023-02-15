@@ -37,3 +37,6 @@ if options == '2':
     # printing the address/location name
     print(locname.address)
 
+# if the user chose option 3
+if options == '3':
+    print("Thank you!")
