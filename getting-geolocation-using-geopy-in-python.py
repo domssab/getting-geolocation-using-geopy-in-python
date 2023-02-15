@@ -33,14 +33,3 @@ if options == '2':
     # asking user to input the coordinates
     coordinate = input("Coordinates: ")
     locname = geoLoc.reverse(coordinate)
-# importing modules
-from geopy.geocoders import Nominatim
-
-# calling the nominatim tool
-geoLoc = Nominatim(user_agent="GetLoc")
-
-# passing the coordinates
-locname = geoLoc.reverse("26.7674446, 81.109758")
-
-# printing the address/location name
-print(locname.address)
