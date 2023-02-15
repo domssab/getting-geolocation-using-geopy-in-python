@@ -2,9 +2,6 @@
 # import the geopy library
 from geopy.geocoders import Nominatim
 
-# calling the Nominatim tool
-loc = Nominatim(user_agent="GetLoc")
-
 # make user choose between location or coordinates
 print("Here are your options:"
       "\n1. Location"
@@ -14,6 +11,8 @@ options = input("Location or Coordinates?: ")
 
 # if the user chose option 1
 if options == '1':
+    # call the Nominatim tool
+    loc = Nominatim(user_agent="GetLoc")
 
 # entering the location name
 location = input("Location: ")
