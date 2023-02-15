@@ -13,14 +13,13 @@ options = input("Location or Coordinates?: ")
 if options == '1':
     # call the Nominatim tool
     loc = Nominatim(user_agent="GetLoc")
+    # asking user to input location
+    location = input("Location: ")
+    getLoc = loc.geocode(location)
 
-# entering the location name
-location = input("Location: ")
-getLoc = loc.geocode(location)
+    # printing address
+    print(getLoc.address)
 
-# printing address
-print(getLoc.address)
-
-# printing latitude and longitude
-print("Latitude = ", getLoc.latitude, "\n")
-print("Longitude = ", getLoc.longitude)
+    # printing latitude and longitude
+    print("Latitude = ", getLoc.latitude, "\n")
+    print("Longitude = ", getLoc.longitude)
