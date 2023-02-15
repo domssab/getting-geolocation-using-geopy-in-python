@@ -30,23 +30,39 @@ def start():
             print("Latitude = ", getLoc.latitude,)
             print("Longitude = ", getLoc.longitude)
 
+            try_again = input("Would you like to try again?(yes/no): ")
+            if try_again == "yes":
+                continue
+            else:
+                print("Thank you!")
+                break
+
 # if the user chose option 2
-        if options == '2':
+        elif options == '2':
     # call the Nominatim Tool
             geoLoc = Nominatim(user_agent="GetLoc")
 
     # asking user to input the coordinates
-            coordinate = input("Coordinates: ")
+            coordinate = input("Coordinates (Latitude, Longitude): ")
             locname = geoLoc.reverse(coordinate)
 
     # printing the address/location name
             print(locname.address)
 
+
+            try_again = input("Would you like to try again?(yes/no): ")
+            if try_again == "yes":
+                continue
+            else:
+                print("Thank you!")
+                break
+
 # if the user chose option 3
-        if options == '3':
-            print("Thank you!")
+        elif options == '3':
+            print("Thank you and have a nice day!")
             break
 
         else:
-            print("Make sure you input the right number.")
+            print("Please make sure you input the right number.")
+
 start()
