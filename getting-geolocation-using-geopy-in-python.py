@@ -10,6 +10,7 @@ print("Here are your options:"
       "\n1. Location"
       "\n2. Coordinates",
       "\n3. Exit")
+options = input("Location or Coordinates?: ")
 
 # entering the location name
 location = input("Location: ")
