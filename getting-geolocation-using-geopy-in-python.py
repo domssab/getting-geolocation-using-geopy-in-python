@@ -6,7 +6,8 @@ from geopy.geocoders import Nominatim
 loc = Nominatim(user_agent="GetLoc")
 
 # entering the location name
-getLoc = loc.geocode("Gosainganj Lucknow")
+location = input("Location: ")
+getLoc = loc.geocode(location)
 
 # printing address
 print(getLoc.address)
