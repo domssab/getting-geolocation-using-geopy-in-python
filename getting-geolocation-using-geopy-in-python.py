@@ -61,6 +61,16 @@ def start():
 
 # if the user chose option 3
         elif options == '3':
+            locate = Nominatim(user_agent = "GetLoc")
+
+            location1 = input("Input the first location: ")
+            getLoc1 = loc.geocode(location1)
+
+            location2 = input("Input the second location: ")
+            getLoc2 = loc.geocode(location2)
+
+            print("Coordinates of", location1, "is: ", getLoc1.latitude,",",getLoc2.longitude)
+
             coordinate1 = input("Enter the first coordinates (La/Lo): ")
             coordinate2 = input("Enter the first coordinates (La/Lo): ")
 
