@@ -77,6 +77,13 @@ def start():
 
             print("The distance between", location1, "and", location2, "is: ",GD(coordinates1,coordinates2).km)
 
+
+            try_again = input("Would you like to try again?(yes/no): ")
+            if try_again == "yes":
+                continue
+            else:
+                print("Thank you!")
+                break
 # if the user chose option 4
         elif options == '4':
             print("Thank you and have a nice day!")
