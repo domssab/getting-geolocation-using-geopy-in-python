@@ -14,7 +14,7 @@ def start():
         "\n -------------------------------------"
         "\n")
     while True:
-        options = input("Location or Coordinates?: ")
+        options = input("Enter your option: ")
 
 # if the user chose option 1
         if options == '1':
@@ -64,10 +64,10 @@ def start():
             locate = Nominatim(user_agent = "GetLoc")
 
             location1 = input("Input the first location: ")
-            getLoc1 = loc.geocode(location1)
+            getLoc1 = locate.geocode(location1)
 
             location2 = input("Input the second location: ")
-            getLoc2 = loc.geocode(location2)
+            getLoc2 = locate.geocode(location2)
 
             coordinates1 = getLoc1.latitude, getLoc1.longitude
             coordinates2 = getLoc2.latitude, getLoc2.longitude
@@ -75,10 +75,7 @@ def start():
             print("Coordinates of", location1, "is: ", coordinates1)
             print("Coordinates of", location2, "is: ", coordinates2)
 
-            coordinate1 = input("Enter the first coordinates (La/Lo): ")
-            coordinate2 = input("Enter the first coordinates (La/Lo): ")
-
-            print("The distance between", coordinate1, "and", coordinate2, "is: ",GD(coordinate1,coordinate2).km)
+            print("The distance between", location1, "and", location2, "is: ",GD(coordinates1,coordinates2).km)
 
 # if the user chose option 4
         elif options == '4':
