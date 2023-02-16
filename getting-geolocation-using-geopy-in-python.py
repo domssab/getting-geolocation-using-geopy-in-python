@@ -69,7 +69,11 @@ def start():
             location2 = input("Input the second location: ")
             getLoc2 = loc.geocode(location2)
 
-            print("Coordinates of", location1, "is: ", getLoc1.latitude,",",getLoc2.longitude)
+            coordinates1 = getLoc1.latitude, getLoc1.longitude
+            coordinates2 = getLoc2.latitude, getLoc2.longitude
+
+            print("Coordinates of", location1, "is: ", coordinates1)
+            print("Coordinates of", location2, "is: ", coordinates2)
 
             coordinate1 = input("Enter the first coordinates (La/Lo): ")
             coordinate2 = input("Enter the first coordinates (La/Lo): ")
