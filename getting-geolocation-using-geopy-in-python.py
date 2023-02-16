@@ -1,6 +1,7 @@
 # install geopy library using the 'pip install geopy' in terminal
 # import the geopy library
 from geopy.geocoders import Nominatim
+from geopy.distance import geodesic as GD
 
 def start():
 # make user choose between location or coordinates
@@ -8,7 +9,8 @@ def start():
         "\n|       Here are your options:        |"
         "\n|       1. Location                   |"
         "\n|       2. Coordinates                |",
-        "\n|       3. Exit                       |"
+        "\n|       3. Know the distance          |"
+        "\n|       4. Exit                       |"
         "\n -------------------------------------"
         "\n")
     while True:
@@ -59,6 +61,13 @@ def start():
 
 # if the user chose option 3
         elif options == '3':
+            coordinate1 = input("Enter the first coordinates (La/Lo): ")
+            coordinate2 = input("Enter the first coordinates (La/Lo): ")
+
+            print("The distance between", coordinate1, "and", coordinate2, "is: ",GD(coordinate1,coordinate2).km)
+
+# if the user chose option 4
+        elif options == '4':
             print("Thank you and have a nice day!")
             break
 
